@@ -132,7 +132,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imageView.image = image
-            self.shareButton.enabled = true
         }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
