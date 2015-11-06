@@ -18,3 +18,4 @@ MemeMe lets you take a picture or use a previously taken picture and add caption
 - [ ] When the user presses the share button, Apple’s stock Activity View appears, displaying several options for sharing the meme. After an option is chosen, the Activity View is dismissed and the Meme Editor View is visible again
 
 ## Code Improvements
+
