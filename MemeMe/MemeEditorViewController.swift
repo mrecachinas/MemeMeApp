@@ -91,8 +91,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         if bottomTextField.isFirstResponder() {
             
             // if the view hasn't shifted yet, shift it up
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= getKeyboardHeight(notification)
+            if view.frame.origin.y == 0 {
+                view.frame.origin.y -= getKeyboardHeight(notification)
             }
         }
     }
@@ -102,7 +102,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         if bottomTextField.isFirstResponder() {
             
             // shift the view back to 0
-            self.view.frame.origin.y = 0
+            view.frame.origin.y = 0
         }
     }
     
@@ -157,8 +157,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func takeScreenshot() -> UIImage {
         // uses the context approach
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -182,7 +182,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
 
     func cancel() {
-        self.imageView.image = nil
+        imageView.image = nil
         resetText()
         shareButton.enabled = false
     }
@@ -193,20 +193,20 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         
         // if the image exists, set the imageView to that image
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imageView.image = image
+            imageView.image = image
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func pickImageFromSource(source: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = source
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     // MARK: - IBActions
@@ -233,7 +233,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
             }
         }
         
-        self.presentViewController(activityViewController, animated: true, completion: nil)
+        presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func cancelAction(sender: UIBarButtonItem) {
