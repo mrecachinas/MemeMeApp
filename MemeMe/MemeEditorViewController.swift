@@ -44,16 +44,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set the text field attributes
-        topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        
-        // center the text fields
-        topTextField.textAlignment = NSTextAlignment.Center
-        bottomTextField.textAlignment = NSTextAlignment.Center
-        
-        topTextField.delegate = self
-        bottomTextField.delegate = self
+        setupTextField(topTextField)
+        setupTextField(bottomTextField)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -117,6 +109,16 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
     
     // MARK: - textField related methods
+    
+    func setupTextField(textField: UITextField) {
+        // set the text field attributes
+        textField.defaultTextAttributes = memeTextAttributes
+        
+        // center the text fields
+        textField.textAlignment = NSTextAlignment.Center
+        
+        textField.delegate = self
+    }
     
     func textFieldDidBeginEditing(textField: UITextField) {
         // keep track of the old text before clearing it
