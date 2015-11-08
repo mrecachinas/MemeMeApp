@@ -90,12 +90,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        // only fire on bottom text field
-        if bottomTextField.isFirstResponder() {
-            
-            // shift the view back to 0
-            view.frame.origin.y = 0
-        }
+        // shift the view back to 0
+        view.frame.origin.y = 0
     }
     
     func subscribeToKeyboardNotifications() {
