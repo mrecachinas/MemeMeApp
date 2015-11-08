@@ -117,16 +117,30 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
 
     func generateMemedImage() -> UIImage {
-        // TODO: Hide toolbar and navbar
+        hideStatusBarAndToolbar()
+        let memedImage = takeScreenshot()
+        showStatusBarAndToolbar()
         
+        return memedImage
+    }
+    
+    func takeScreenshot() -> UIImage {
         UIGraphicsBeginImageContext(self.view.frame.size)
         self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        // TODO: Show toolbar and navbar
-        
         return memedImage
+    }
+    
+    func hideStatusBarAndToolbar() {
+        topToolbar.hidden = true
+        bottomToolbar.hidden = true
+    }
+    
+    func showStatusBarAndToolbar() {
+        topToolbar.hidden = false
+        bottomToolbar.hidden = false
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
