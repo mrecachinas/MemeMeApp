@@ -185,6 +185,10 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
     
     @IBAction func cancelAction(sender: UIBarButtonItem) {
+        cancel()
+    }
+    
+    func cancel() {
         self.imageView.image = nil
         resetText()
         shareButton.enabled = false
