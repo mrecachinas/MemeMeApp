@@ -49,6 +49,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         // if there's an image in the imageView, enable the share button
         if let _ = imageView.image {
             shareButton.enabled = true
