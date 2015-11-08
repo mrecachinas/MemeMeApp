@@ -21,4 +21,7 @@ MemeMe lets you take a picture or use a previously taken picture and add caption
 - [ ] Ensure layout is properly constrained
 
 ## Code Improvements
-
+- [ ] User can choose between different fonts.
+- [x] App uses “Impact” font.
+- [ ] User can crop image
+- [ ] App displays exceptional graphic design
