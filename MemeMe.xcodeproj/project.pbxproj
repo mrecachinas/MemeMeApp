@@ -14,6 +14,7 @@
 		884B7E8F1B54765E0032CA03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884B7E8E1B54765E0032CA03 /* Images.xcassets */; };
 		884B7E921B54765E0032CA03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884B7E901B54765E0032CA03 /* LaunchScreen.xib */; };
 		884B7E9E1B54765E0032CA03 /* MemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884B7E9D1B54765E0032CA03 /* MemeMeTests.swift */; };
+		88D28EE31BEEBC9800CF99FE /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D28EE21BEEBAFD00CF99FE /* Impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		884B7E971B54765E0032CA03 /* MemeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		884B7E9C1B54765E0032CA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		884B7E9D1B54765E0032CA03 /* MemeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeTests.swift; sourceTree = "<group>"; };
+		88D28EE21BEEBAFD00CF99FE /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				884B7E8B1B54765E0032CA03 /* Main.storyboard */,
 				884B7E8E1B54765E0032CA03 /* Images.xcassets */,
 				884B7E901B54765E0032CA03 /* LaunchScreen.xib */,
+				88D28EE21BEEBAFD00CF99FE /* Impact.ttf */,
 				884B7E831B54765E0032CA03 /* Supporting Files */,
 			);
 			path = MemeMe;
@@ -198,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D28EE31BEEBC9800CF99FE /* Impact.ttf in Resources */,
 				884B7E8D1B54765E0032CA03 /* Main.storyboard in Resources */,
 				884B7E921B54765E0032CA03 /* LaunchScreen.xib in Resources */,
 				884B7E8F1B54765E0032CA03 /* Images.xcassets in Resources */,
